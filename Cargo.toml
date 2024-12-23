@@ -20,11 +20,6 @@ path = "src/cargo-fmt/main.rs"
 
 
 [[bin]]
-name = "solana-fmt"
-path = "src/cargo-fmt/main.rs"
-
-
-[[bin]]
 name = "rustfmt-format-diff"
 path = "src/format-diff/main.rs"
 
