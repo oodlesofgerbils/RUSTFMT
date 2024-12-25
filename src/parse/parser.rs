@@ -71,6 +71,7 @@ impl<'a> ParserBuilder<'a> {
                 rustc_span::FileName::Custom("stdin".to_owned()),
                 text,
             ),
+            Input::File(ref file) =>new_parser_from_source_str(psess,file),
         }
     }
 }
