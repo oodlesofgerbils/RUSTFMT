@@ -18,6 +18,7 @@ path = "src/bin/main.rs"
 name = "cargo-fmt"
 path = "src/cargo-fmt/main.rs"
 
+
 [[bin]]
 name = "rustfmt-format-diff"
 path = "src/format-diff/main.rs"
