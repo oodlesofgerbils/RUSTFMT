@@ -67,7 +67,6 @@ fn convert_to_windows_newlines(formatted_text: &String) -> String {
         let next_char = chars.peek();
         match current_char {
             LINE_FEED => transformed.push_str(WINDOWS_NEWLINE),
-            CARRIAGE_RETURN if next_char == Some(&LINE_FEED) => {}
             current_char => transformed.push(current_char),
         }
     }
