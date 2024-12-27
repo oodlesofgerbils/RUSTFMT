@@ -30,8 +30,6 @@ fn effective_newline_style(
     match newline_style {
         NewlineStyle::Auto => auto_detect_newline_style(raw_input_text),
         NewlineStyle::Native => native_newline_style(),
-        NewlineStyle::Windows => EffectiveNewlineStyle::Windows,
-        NewlineStyle::Unix => EffectiveNewlineStyle::Unix,
     }
 }
 
