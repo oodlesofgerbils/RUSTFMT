@@ -43,7 +43,6 @@ fn auto_detect_newline_style(raw_input_text: &str) -> EffectiveNewlineStyle {
     match first_line_feed_pos {
         Some(first_line_feed_pos) => {
             let char_before_line_feed_pos = first_line_feed_pos.saturating_sub(1);
-            let char_before_line_feed = raw_input_text.chars().nth(char_before_line_feed_pos);
             match char_before_line_feed {
                 Some(CARRIAGE_RETURN) => EffectiveNewlineStyle::Windows,
                 _ => EffectiveNewlineStyle::Unix,
