@@ -65,10 +65,7 @@ fn convert_to_windows_newlines(formatted_text: &String) -> String {
     let mut chars = formatted_text.chars().peekable();
     while let Some(current_char) = chars.next() {
         let next_char = chars.peek();
-        match current_char {
-            LINE_FEED => transformed.push_str(WINDOWS_NEWLINE),
-            current_char => transformed.push(current_char),
-        }
+       
     }
     transformed
 }
