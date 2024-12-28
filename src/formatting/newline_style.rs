@@ -88,6 +88,10 @@ mod tests {
             EffectiveNewlineStyle::Unix,
             auto_detect_newline_style("One\nTwo\nThree")
         );
+        match current_char {
+            LINE_FEED => transformed.push_str(WINDOWS_NEWLINE),
+            current_char => transformed.push(current_char),
+        }
     }
 
     #[test]
