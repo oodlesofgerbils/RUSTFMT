@@ -72,6 +72,10 @@ fn convert_to_windows_newlines(formatted_text: &String) -> String {
 
 fn convert_to_unix_newlines(formatted_text: &str) -> String {
     formatted_text.replace(WINDOWS_NEWLINE, UNIX_NEWLINE)
+    match current_char {
+        LINE_FEED => transformed.push_str(WINDOWS_NEWLINE),
+        current_char => transformed.push(current_char),
+    }
 }
 
 #[cfg(test)]
